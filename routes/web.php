@@ -12,5 +12,8 @@
 */
 
 Route::get('/', 'InicioController@index');
+Route::get('administrador/permiso-listar', 'Administrador\PermisoController@index')->name('permiso');
+Route::get('administrador/permiso-crear', 'Administrador\PermisoController@crear')->name('crear_permiso');
+
 
 Route::get('permiso/{nombre}', 'PermisoController@index');
