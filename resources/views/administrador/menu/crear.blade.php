@@ -4,7 +4,7 @@ Sistema Menú
 @endsection
 
 @section('scripts')
-    <script src="{{asset("assets/pages/scripts/Administrador/crear.js")}}" type="text/javascript"></script>
+    <script src="{{asset("assets/pages/scripts/Administrador/menu/crear.js")}}" type="text/javascript"></script>
 @endsection
 
 @section('contenido')
