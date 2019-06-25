@@ -2,6 +2,11 @@
 @section('titulo')
 Sistema Menú
 @endsection
+
+@section('scripts')
+    <script src="{{asset("assets/pages/scripts/Administrador/crear.js")}}" type="text/javascript"></script>
+@endsection
+
 @section('contenido')
 <div class="row">
     <div class="col-lg-12">
