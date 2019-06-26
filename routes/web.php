@@ -23,5 +23,12 @@ Route::get('administrador/menu/crear', 'Administrador\MenuController@crear')->na
 Route::post('administrador/menu', 'Administrador\MenuController@guardar')->name('guardar_menu');
 Route::post('administrador/menu/guardar-orden', 'Administrador\MenuController@guardarOrden')->name('guardar_orden');
 
+//Enrutamiento Rol
+Route::get('administrador/rol', 'Administrador\RolController@index')->name('rol');
+Route::get('administrador/rol/crear', 'Administrador\RolController@crear')->name('crear_rol');
+Route::get('administrador/rol/{id}/editar', 'Administrador\RolController@editar')->name('editar_rol');
+Route::post('administrador/rol', 'Administrador\RolController@guardar')->name('guardar_rol');
+Route::put('administrador/rol/{id}', 'Administrador\RolController@actualizar')->name('actualizar_rol');
+Route::delete('administrador/rol/{id}', 'Administrador\RolController@eliminar')->name('eliminar_rol');
 
 Route::get('permiso/{nombre}', 'PermisoController@index');
