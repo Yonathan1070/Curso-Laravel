@@ -16,6 +16,7 @@ Route::get('/', 'InicioController@index');
 //Enrutamiento Permiso
 Route::get('administrador/permiso-listar', 'Administrador\PermisoController@index')->name('permiso');
 Route::get('administrador/permiso-crear', 'Administrador\PermisoController@crear')->name('crear_permiso');
+Route::get('permiso/{nombre}', 'PermisoController@index');
 
 //Enrutamiento Menú
 Route::get('administrador/menu', 'Administrador\MenuController@index')->name('menu');
@@ -26,9 +27,12 @@ Route::post('administrador/menu/guardar-orden', 'Administrador\MenuController@gu
 //Enrutamiento Rol
 Route::get('administrador/rol', 'Administrador\RolController@index')->name('rol');
 Route::get('administrador/rol/crear', 'Administrador\RolController@crear')->name('crear_rol');
-Route::get('administrador/rol/{id}/editar', 'Administrador\RolController@editar')->name('editar_rol');
 Route::post('administrador/rol', 'Administrador\RolController@guardar')->name('guardar_rol');
+Route::get('administrador/rol/{id}/editar', 'Administrador\RolController@editar')->name('editar_rol');
 Route::put('administrador/rol/{id}', 'Administrador\RolController@actualizar')->name('actualizar_rol');
 Route::delete('administrador/rol/{id}', 'Administrador\RolController@eliminar')->name('eliminar_rol');
 
-Route::get('permiso/{nombre}', 'PermisoController@index');
+//Enrutamiento Menu_Rol
+Route::get('administrador/menu-rol', 'Administrador\MenuRolController@index')->name('menu_rol');
+Route::post('administrador/menu-rol', 'Administrador\MenuRolController@guardar')->name('guardar_menu_rol');
+
